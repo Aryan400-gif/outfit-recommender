@@ -82,8 +82,8 @@ def recommend():
 
     except Exception as e:
         print(f"❗️ Server Error: {e}")
-        return jsonify({"error": "Server error"}), 500
+        return jsonify({"error": "Server error"})
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
