@@ -1,0 +1,126 @@
+{
+  "outfits": [
+    {
+      "look_title": "Urban Frontier Flow",
+      "description": "Embrace the city's pulse with relaxed-fit distressed denim, oversized graphic tee, and earthy utility overshirt.",
+      "event": "casual",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "street",
+      "links": [
+        { "url": "https://www.uniqlo.com/in/men-denim", "image_url": "https://images.uniqlo.com/men-denim.jpg" },
+        { "url": "https://www.myntra.com/men-graphic-tee", "image_url": "https://images.myntra.com/graphic-tee.jpg" },
+        { "url": "https://www.adidas.com/in/men-overshirt", "image_url": "https://images.adidas.com/utility-overshirt.jpg" }
+      ]
+    },
+    {
+      "look_title": "Urban Trailblazer",
+      "description": "Technical-knit tee, water-resistant hoodie, tapered joggers, chunky trainers. Street style and comfort combined.",
+      "event": "casual",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "street",
+      "links": [
+        { "url": "https://www.nike.com/in/lifestyle-trainers", "image_url": "https://images.nike.com/lifestyle-trainers.jpg" },
+        { "url": "https://www.adidas.com/in/joggers", "image_url": "https://images.adidas.com/joggers.jpg" },
+        { "url": "https://www.uniqlo.com/in/technical-hoodie", "image_url": "https://images.uniqlo.com/technical-hoodie.jpg" }
+      ]
+    },
+    {
+      "look_title": "Boho Breeze",
+      "description": "Flowy maxi dress, layered jewelry, woven sandals, lightweight kimono. Relaxed, carefree style.",
+      "event": "brunch",
+      "gender": "female",
+      "budget": "mid-range",
+      "style": "boho",
+      "links": [
+        { "url": "https://www.ajio.com/women-dresses/c/2201001", "image_url": "https://images.ajio.com/boho-dress.jpg" },
+        { "url": "https://www.myntra.com/fringe-jacket", "image_url": "https://images.myntra.com/fringe-jacket.jpg" },
+        { "url": "https://www.flipkart.com/women-footwear-sandals/c/ftw_sandals", "image_url": "https://images.flipkart.com/sandals.jpg" }
+      ]
+    },
+    {
+      "look_title": "Preppy Polished",
+      "description": "Crisp button-down, v-neck sweater, tailored chinos, loafers. Smart casual vibe.",
+      "event": "casual",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "preppy",
+      "links": [
+        { "url": "https://www.hm.com/in/product/button-down-shirt", "image_url": "https://images.hm.com/button-down-shirt.jpg" },
+        { "url": "https://www.zara.com/in/v-neck-sweater", "image_url": "https://images.zara.com/v-neck-sweater.jpg" },
+        { "url": "https://www.myntra.com/chinos", "image_url": "https://images.myntra.com/chinos.jpg" },
+        { "url": "https://www.myntra.com/loafers", "image_url": "https://images.myntra.com/loafers.jpg" }
+      ]
+    },
+    {
+      "look_title": "Athleisure Luxe",
+      "description": "Moisture-wicking long-sleeve tee, quarter-zip pullover, tapered joggers, minimalist sneakers.",
+      "event": "casual",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "athleisure",
+      "links": [
+        { "url": "https://www.nike.com/in/performance-tee", "image_url": "https://images.nike.com/performance-tee.jpg" },
+        { "url": "https://www.uniqlo.com/in/quarter-zip-pullover", "image_url": "https://images.uniqlo.com/quarter-zip-pullover.jpg" },
+        { "url": "https://www.adidas.com/in/joggers", "image_url": "https://images.adidas.com/joggers.jpg" },
+        { "url": "https://www.nike.com/in/lifestyle-sneakers", "image_url": "https://images.nike.com/lifestyle-sneakers.jpg" }
+      ]
+    },
+    {
+      "look_title": "Urban Explorer",
+      "description": "Bomber jacket, graphic tee, cargo pants, high-top sneakers. Functional city-ready style.",
+      "event": "casual",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "street",
+      "links": [
+        { "url": "https://www.hm.com/in/product/bomber-jacket", "image_url": "https://images.hm.com/bomber-jacket.jpg" },
+        { "url": "https://www.zara.com/in/graphic-tee", "image_url": "https://images.zara.com/graphic-tee.jpg" },
+        { "url": "https://www.myntra.com/cargo-pants", "image_url": "https://images.myntra.com/cargo-pants.jpg" },
+        { "url": "https://www.nike.com/in/high-top-sneakers", "image_url": "https://images.nike.com/high-top-sneakers.jpg" }
+      ]
+    },
+    {
+      "look_title": "Coastal Breeze",
+      "description": "Striped linen shirt, white shorts, espadrilles. Light and airy beach vibe.",
+      "event": "beach",
+      "gender": "male",
+      "budget": "mid-range",
+      "style": "casual",
+      "links": [
+        { "url": "https://www.hm.com/in/product/linen-shirt", "image_url": "https://images.hm.com/linen-shirt.jpg" },
+        { "url": "https://www.zara.com/in/white-shorts", "image_url": "https://images.zara.com/white-shorts.jpg" },
+        { "url": "https://www.myntra.com/espadrilles", "image_url": "https://images.myntra.com/espadrilles.jpg" }
+      ]
+    },
+    {
+      "look_title": "Vintage Charm",
+      "description": "Polka dot blouse, high-waisted jeans, cat-eye sunglasses, ballet flats. Retro-modern vibe.",
+      "event": "casual",
+      "gender": "female",
+      "budget": "mid-range",
+      "style": "vintage",
+      "links": [
+        { "url": "https://www.ajio.com/women-tops/c/2201001", "image_url": "https://images.ajio.com/polka-dot-blouse.jpg" },
+        { "url": "https://www.myntra.com/high-waisted-jeans", "image_url": "https://images.myntra.com/high-waisted-jeans.jpg" },
+        { "url": "https://www.flipkart.com/women-sunglasses/c/ftw_sunglasses", "image_url": "https://images.flipkart.com/cat-eye-sunglasses.jpg" },
+        { "url": "https://www.myntra.com/ballet-flats", "image_url": "https://images.myntra.com/ballet-flats.jpg" }
+      ]
+    },
+    {
+      "look_title": "Effortless Chic",
+      "description": "White blouse tucked into black trousers, ankle boots, structured handbag. Minimalist elegance.",
+      "event": "casual",
+      "gender": "female",
+      "budget": "mid-range",
+      "style": "minimalist",
+      "links": [
+        { "url": "https://www.ajio.com/women-tops/c/2201001", "image_url": "https://images.ajio.com/white-blouse.jpg" },
+        { "url": "https://www.myntra.com/black-trousers", "image_url": "https://images.myntra.com/black-trousers.jpg" },
+        { "url": "https://www.flipkart.com/women-footwear-boots/c/ftw_boots", "image_url": "https://images.flipkart.com/ankle-boots.jpg" },
+        { "url": "https://www.myntra.com/handbags", "image_url": "https://images.myntra.com/structured-handbag.jpg" }
+      ]
+    }
+  ]
+}

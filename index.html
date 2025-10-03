@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Fashion Stylist 👗</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg,#ffecd2,#fcb69f);
+      display:flex; justify-content:center; align-items:center;
+      min-height:100vh; padding:20px;
+    }
+    .container {
+      background:white; padding:30px; border-radius:16px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+      width:100%; max-width:400px; text-align:center;
+      animation:fadeIn 1s ease;
+    }
+    h1 { margin-bottom:10px; font-size:1.8rem; }
+    p { margin-bottom:20px; color:#666; }
+    label { display:block; text-align:left; font-weight:600; margin:12px 0 6px; }
+    select,button {
+      width:100%; padding:10px; border-radius:8px; margin-bottom:15px;
+      border:1px solid #ccc; font-size:1rem;
+    }
+    select:focus { border-color:#ff7e5f; outline:none; }
+    button {
+      background:linear-gradient(135deg,#ff7e5f,#feb47b);
+      border:none; color:white; font-weight:bold; cursor:pointer;
+      transition:0.3s;
+    }
+    button:hover { transform:translateY(-2px); box-shadow:0 6px 15px rgba(255,126,95,0.3); }
+    #result { margin-top:20px; text-align:left; }
+    .card {
+      background:#fafafa; border-radius:12px; padding:15px; margin-top:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 { margin-bottom:10px; }
+    .card a { display:block; margin:5px 0; color:#ff7e5f; text-decoration:none; font-weight:500; }
+    .card a:hover { text-decoration:underline; }
+    .card img { max-width:100%; border-radius:8px; margin:5px 0; }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(15px);} to{opacity:1; transform:translateY(0);} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✨ AI Fashion Stylist</h1>
+    <p>Let AI design your next perfect look.</p>
+
+    <form id="stylist-form">
+      <label for="event">What's the event?</label>
+      <select id="event">
+        <option value="wedding">Wedding</option>
+        <option value="party">Party</option>
+        <option value="casual">Casual</option>
+        <option value="brunch">Brunch</option>
+        <option value="festival">Festival</option>
+        <option value="beach">Beach</option>
+      </select>
+
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label for="budget">Budget</label>
+      <select id="budget">
+        <option value="affordable">Low / Affordable</option>
+        <option value="mid-range">Mid-Range</option>
+        <option value="luxury">High / Luxury</option>
+      </select>
+
+      <label for="style">Preferred Style</label>
+      <select id="style">
+        <option value="classic">Classic</option>
+        <option value="trendy">Trendy</option>
+        <option value="modern">Modern</option>
+        <option value="street">Street</option>
+        <option value="boho">Boho</option>
+        <option value="minimalist">Minimalist</option>
+        <option value="athleisure">Athleisure</option>
+        <option value="preppy">Preppy</option>
+        <option value="smart-casual">Smart Casual</option>
+        <option value="vintage">Vintage</option>
+      </select>
+
+      <button type="submit">👗 Design My Outfit</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("stylist-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        event: document.getElementById("event").value,
+        gender: document.getElementById("gender").value,
+        budget: document.getElementById("budget").value,
+        style: document.getElementById("style").value
+      };
+
+      try {
+        const res = await fetch("/recommend", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        const resultDiv = document.getElementById("result");
+
+        if (result.error) {
+          resultDiv.innerHTML = `<p style="color:red;">❌ ${result.error}</p>`;
+          return;
+        }
+
+        let linksHTML = "";
+        if (result.links && result.links.length > 0) {
+          linksHTML = result.links.map(l => `
+            <div>
+              <a href="${l.url}" target="_blank">${l.url}</a>
+              <img src="${l.image_url}" alt="Outfit Image">
+            </div>
+          `).join("");
+        } else {
+          linksHTML = "<p>No direct shopping links found.</p>";
+        }
+
+        resultDiv.innerHTML = `
+          <div class="card">
+            <h3>${result.look_title}</h3>
+            <p>${result.description}</p>
+            <h4>🛍 Shopping Links:</h4>
+            ${linksHTML}
+          </div>
+        `;
+      } catch (err) {
+        document.getElementById("result").innerHTML = `<p style="color:red;">❌ Error fetching recommendation</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
